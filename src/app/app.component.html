@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jogo da Forca </title>
+  </head>
+  
+  <body>
+    <div class="row">
+      <div class="col text-center">
+        <img src="./assets/img/{{ tentativas }}.png" class="ahorcado-img">
+        <h3> Tentativas <small> {{ tentativas }} / 9 </small></h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <h1> {{ palavraOculta }} </h1>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="ganhei">
+      <div class="col text-center">
+        <h1> PARABENS!!! :D </h1>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="perdi">
+      <div class="col text-center">
+        <h1> PERDEU :( </h1>
+        <h4> {{ palavra }} </h4>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="!ganhei && !perdi">
+      <div class="col text-center">
+        <button (click)="comprovar(letra)" *ngFor="let letra of letras" class="btn btn-primary">
+          {{ letra }}
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
