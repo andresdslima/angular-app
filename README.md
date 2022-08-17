@@ -1,6 +1,6 @@
 * The Hangman Project *
 
-- [App deploy](https://andresdslima.github.io/angular-app/)
+- [App deploy](https://angular-andre.vercel.app)
 - [GitHub repository](https://github.com/andresdslima/angular-app)
 
 >**Technologies:** *HTML | CSS | TypeScript | Angular*
